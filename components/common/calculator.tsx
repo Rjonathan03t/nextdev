@@ -41,7 +41,7 @@ export default function Calculator({
     }
 
     return (
-        <Container>
+        <Container className='my-12'>
             <div className='flex flex-col gap-5'>
                 <h1 className='text-2xl uppercase font-light'>
                     {type}
@@ -56,14 +56,14 @@ export default function Calculator({
                             value={value1}
                             className='outline-none text-center text-2xl w-12'
                         />
-                        <FaPlus className='text-xl' />
+                        <Icon className='text-xl' />
                         <input
                             type="number"
                             onChange={(e) => setValue2(Number(e.target.value))}
                             value={value2}
                             className='outline-none text-center text-2xl w-12'
                         />
-                        <Icon className='text-xl' />
+                        <FaEquals className='text-xl' />
                         <p className='text-2xl'>
                             {total}
                         </p>
@@ -72,7 +72,7 @@ export default function Calculator({
                         <button
                             type='button'
                             style={{ backgroundColor: "var(--secondary)" }}
-                            className='rounded-3xl py-5 px-6 cursor-pointer  text-2xl'
+                            className='rounded-3xl py-2 px-4 cursor-pointer  text-2xl'
                             onClick={() => {
                                 switch (type) {
                                     case 'sum':
@@ -87,12 +87,12 @@ export default function Calculator({
                                     default : 'sum'
                                 }
                             }}>
-                            Get {type}
+                            Total
                         </button>
                         <button
                             type='button'
                             style={{ backgroundColor: "var(--primary)" }}
-                            className='rounded-3xl py-5 px-6 cursor-pointer text-green-500  text-2xl'
+                            className='rounded-3xl py-2 px-4 cursor-pointer text-green-500  text-2xl'
                             onClick={resetInput}>
                             Reset
                         </button>
