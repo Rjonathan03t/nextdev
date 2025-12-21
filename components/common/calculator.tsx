@@ -34,6 +34,11 @@ export default function Calculator({
         setTotal(quotient);
     }
 
+    const getTimes = () => {
+        const times = value1 * value2;
+        setTotal(times);
+    }
+
     const resetInput = () => {
         setTotal(0)
         setValue1(0)
@@ -72,19 +77,21 @@ export default function Calculator({
                         <button
                             type='button'
                             style={{ backgroundColor: "var(--secondary)" }}
-                            className='rounded-3xl py-2 px-4 cursor-pointer  text-2xl'
+                            className='rounded-2xl py-2 px-4 cursor-pointer  text-xl'
                             onClick={() => {
                                 switch (type) {
                                     case 'sum':
                                         getSum();
                                         break;
                                     case 'substraction':
-                                        getSubstract()
+                                        getSubstract();
                                         break;
                                     case 'quotient':
-                                        getQuotient()
+                                        getQuotient();
                                         break;
-                                    default : 'sum'
+                                    case 'multiplication':
+                                        getTimes();
+                                    default : ''
                                 }
                             }}>
                             Total
@@ -92,7 +99,7 @@ export default function Calculator({
                         <button
                             type='button'
                             style={{ backgroundColor: "var(--primary)" }}
-                            className='rounded-3xl py-2 px-4 cursor-pointer text-green-500  text-2xl'
+                            className='rounded-2xl py-2 px-4 cursor-pointer text-green-500  text-xl'
                             onClick={resetInput}>
                             Reset
                         </button>
