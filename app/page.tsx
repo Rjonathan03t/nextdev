@@ -6,9 +6,6 @@ import Times from '@/components/multiplication/times';
 export default function Home() {
   return (
     <>
-      <h1 className="text-center text-4xl font-light pt-2">
-        Mini basic calculator
-      </h1>
       <Sum />
       <Substraction />
       <Quotient/>
