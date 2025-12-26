@@ -1,5 +1,5 @@
 'use client'
-import { useState } from 'react';
+import { useState,useRef } from 'react';
 import { FaSortDown, FaSortUp } from "react-icons/fa6";
 import { FaSun, FaMoon } from "react-icons/fa";
 import { RxHamburgerMenu } from "react-icons/rx";
@@ -12,6 +12,7 @@ export default function Header() {
     const [currentIcon, setCurrentIcon] = useState(<FaMoon />);
     const [chooseIcon, setChooseIcon] = useState(<FaSun />);
     const [isOpen, setIsOpen] = useState(false);
+    const navigationRef = useRef<HTMLDivElement>;
 
     const handleDropDown = () => {
         setDropDown(prev => !prev);
