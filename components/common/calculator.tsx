@@ -50,12 +50,12 @@ export default function Calculator({
     }
 
     return (
-        <Container className='my-12'>
-            <div className='flex flex-col gap-5'>
+        <div className='my-12'>
+            <div className='flex flex-col lg:items-start items-center gap-5'>
                 <h1 className='text-2xl uppercase font-light'>
                     {type}
                 </h1>
-                <div className='flex flex-row items-center gap-5'>
+                <div className='lg:flex lg:flex-row flex flex-col items-center gap-5'>
                     <div
                         className='flex flex-row gap-5 rounded-full py-5 px-12 justify-center items-center'
                         style={{ border: "1px solid var(--secondary)" }}>
@@ -110,6 +110,6 @@ export default function Calculator({
                     </div>
                 </div>
             </div>
-        </Container >
+        </div >
     );
 }

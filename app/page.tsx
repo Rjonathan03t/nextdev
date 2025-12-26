@@ -6,10 +6,9 @@ import Times from '@/components/multiplication/times';
 export default function Home() {
   return (
     <>
-      <Sum />
-      <Substraction />
-      <Quotient/>
-      <Times/>
+      <h1 className='text-3xl font-light text-center p-32'>
+        Welcome to my frontend exercise web
+      </h1>
     </>
   );
 }
