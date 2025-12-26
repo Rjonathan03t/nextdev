@@ -1,13 +1,14 @@
 @import "tailwindcss";
 
-:root{
+:root {
   --primary: rgb(255, 255, 255);
   --secondary: rgb(65, 175, 28);
   --background: rgb(33, 33, 33);
-  --text:rgb(255, 255, 255);
+  --text: rgb(255, 255, 255);
 }
 
-body{
-  background-color:var(--background);
-  color:var(--text);
-}
+
+body {
+  background-color: var(--background);
+  color: var(--text);
+} 

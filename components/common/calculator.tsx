@@ -19,6 +19,10 @@ export default function Calculator({
     const [value1, setValue1] = useState<number>(0);
     const [value2, setValue2] = useState<number>(0);
 
+    const fetch =  () =>{
+        
+    }
+
     const getSum = () => {
         const sum = value1 + value2;
         setTotal(sum);
